@@ -58,7 +58,7 @@ Power Prediction/
 
 ---
 
-## ⚙️ Configuration — What You Can Change
+##  Configuration — What You Can Change
 
 All settings are at the **top of the script** (lines 8–22):
 
@@ -215,7 +215,7 @@ The script reports three metrics evaluated on a held-out validation set (last 7 
 
 ---
 
-## 🔧 Common Issues & Fixes
+##  Common Issues & Fixes
 
 ### `ModuleNotFoundError: No module named 'pandas'`
 ```bash
