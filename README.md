@@ -1,11 +1,11 @@
-# ⚡ Power Consumption Prediction — XGBoost + Optuna
+#  Power Consumption Prediction — XGBoost + Optuna
 
 A context-aware 15-minute interval power load forecasting system built in Python.  
 Trains separate XGBoost models per season, time-of-day period, and day type (weekday/weekend) for maximum accuracy.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Power Prediction/
@@ -20,7 +20,7 @@ Power Prediction/
 > The output Excel file is also saved in the same folder automatically.
 
 
-## 📥 Input File — `Dataset.xlsx`
+##  Input File — `Dataset.xlsx`
 
 | Column | Format | Description |
 |---|---|---|
@@ -40,7 +40,7 @@ Power Prediction/
 
 ---
 
-## 📤 Output File
+##  Output File
 
 **Filename:** `Power_Prediction_<start_date>_to_<end_date>.xlsx`  
 **Saved to:** Same folder as the script
@@ -104,7 +104,7 @@ Number of Optuna hyperparameter search trials per context model.
 
 ---
 
-## 🧠 How the Model Works
+##  How the Model Works
 
 ### Step 1 — Context Filtering
 Instead of training one model on all data, the script trains a **separate XGBoost model for each unique combination** of:
@@ -143,7 +143,7 @@ This ensures the model never crashes on thin data.
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 ```bash
 pip install pandas numpy xgboost optuna scikit-learn openpyxl
@@ -160,7 +160,7 @@ pip install pandas numpy xgboost optuna scikit-learn openpyxl
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Place `Dataset.xlsx` and `power_xgboost.py` in the same folder
 2. Open terminal / PowerShell in that folder
@@ -200,7 +200,7 @@ python power_xgboost.py
 
 ---
 
-## 📊 Understanding the Accuracy Metrics
+##  Understanding the Accuracy Metrics
 
 The script reports three metrics evaluated on a held-out validation set (last 7 days of each context):
 
@@ -243,7 +243,7 @@ START_DATE = "2026-06-04"
 
 ---
 
-## 📅 Changing Prediction Dates — Quick Reference
+##  Changing Prediction Dates — Quick Reference
 
 | Goal | Change |
 |---|---|
@@ -255,7 +255,7 @@ START_DATE = "2026-06-04"
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - The script is **entirely offline** — no internet connection required
 - Output Excel file is **overwritten** if you run with the same date range again
